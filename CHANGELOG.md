@@ -1,3 +1,6 @@
+# 2.0.0-beta.1 (2026-11-10)
+- Initial release after forking the project to a new maintainer. The component is now maintained by @blafoo. Thanks to @albertogeniola for the previous work and support.
+
 # 1.3.10beta1 (2025-09-29)
 - Update low-level dependency to 0.4.9.2, so to address #569
 - Attempt to address #479

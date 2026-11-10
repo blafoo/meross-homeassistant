@@ -1,7 +1,11 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-![Build](https://img.shields.io/azure-devops/build/albertogeniola/c4128d1b-c23c-418d-95c5-2de061954ee5/3/master?style=for-the-badge)
+![Build](https://img.shields.io/azure-devops/build/blafoo/c4128d1b-c23c-418d-95c5-2de061954ee5/3/master?style=for-the-badge)
 
 # Meross HomeAssistant component
+
+> **Note:** This is a fork of [albertogeniola/meross-homeassistant](https://github.com/albertogeniola/meross-homeassistant), maintained because the original project has seen no recent activity.
+> Many thanks to [@albertogeniola](https://github.com/albertogeniola) for the original work and for reverse-engineering the Meross protocols that this integration is built upon!
+
 A full-featured Homeassistant component to drive Meross devices. 
 This component is based on the underlying MerossIot library available [here](https://github.com/albertogeniola/MerossIot).
 
@@ -18,7 +22,7 @@ Click on Install. When the installation completes, **you must restart homeassist
 As soon as HomeAssistant is restarted, you can proceed with __component setup__.
 
 ### Option B: Classic installation (custom_component)
-1. Download the latest zip release archive from [here](https://github.com/albertogeniola/meross-homeassistant/releases/latest)
+1. Download the latest zip release archive from [here](https://github.com/blafoo/meross-homeassistant/releases/latest))
 1. Unzip/copy the meross_cloud directory within the `custom_components` directory of your homeassistant installation.
 The `custom_components` directory resides within your homeassistant configuration directory.
 Usually, the configuration directory is within your home (`~/.homeassistant/`).
@@ -55,7 +59,7 @@ The following table summarizes the fields that the wizard will require you to fi
 | Skip MQTT certificate validation | True (Checked)          | Configures MQTT certificate validation. When unchecked it requires a valid certificate to be exposed from the Meross Server. If checked, it skips the MQTT certificate validation. If connecting to the official Meross cloud, you can uncheck this. When connecting to local-lan or custom MQTT brokers, you might want to check this. |
 
 The following animation shows an example of component configuration
-[![Installation via web UI](https://raw.githubusercontent.com/albertogeniola/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)](https://raw.githubusercontent.com/albertogeniola/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)
+[![Installation via web UI](https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)](https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)
 
 ## Features
 ### Massive support
@@ -144,7 +148,7 @@ that motivates me and helps me buy _more ram_ which is absolutely necessary when
 
 By buying me a coffee, not only you make my development more efficient, but also motivate me to further improve 
 my work. On the other hand, buying me a beer will certainly make me happier: **a toast to you, supporter**!
-In case you are a pro and a strong opensource supporter, you might also consider [sponsoring my GitHub work](https://github.com/sponsors/albertogeniola).
+In case you are a pro and a strong opensource supporter, you might also consider [sponsoring my GitHub work](https://github.com/sponsors/blafoo).
 
-[![Buy me a coffe!](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/albertogeniola)
+[![Buy me a coffe!](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/blafoo)
 

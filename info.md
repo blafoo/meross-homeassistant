@@ -32,8 +32,8 @@ The following table will help you get the right one:
 
 The following animation shows how to do that.
 
-<a href="https://raw.githubusercontent.com/albertogeniola/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif">
-<img src="https://raw.githubusercontent.com/albertogeniola/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif" alt="Installation via web-ui" width=400>
+<a href="https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif">
+<img src="https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif" alt="Installation via web-ui" width=400>
 </a>
 
 ### API rate limit
@@ -46,7 +46,7 @@ Therefore, you should avoid using high-frequency polling scripts/automations wit
 ## Be nice!
 
 If you like the component, why don't you support me by buying me a beer or a coffe?
-It would certainly motivate me to further improve this work. [Sponsor me on GitHub](https://github.com/sponsors/albertogeniola)!
+It would certainly motivate me to further improve this work. [Sponsor me on GitHub](https://github.com/sponsors/blafoo)!
 
 Or, if you prefer, buy me some coffe for further improve this component even more.
-[![Buy me a coffe!](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/albertogeniola)
+[![Buy me a coffe!](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/blafoo)
