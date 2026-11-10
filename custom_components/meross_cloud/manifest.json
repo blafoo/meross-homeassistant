@@ -1,14 +1,14 @@
 {
   "domain": "meross_cloud",
   "name": "Meross Cloud IoT",
-  "documentation": "https://www.home-assistant.io/components/meross_cloud",
-  "issue_tracker": "https://github.com/blafoo/meross-homeassistant",
-  "dependencies": ["persistent_notification"],
   "after_dependencies": ["zeroconf"],
   "codeowners": ["@blafoo"],
-  "requirements": ["meross_iot==0.4.9.2"],
   "config_flow": true,
-  "quality_scale": "platinum",
+  "dependencies": ["persistent_notification"],
+  "documentation": "https://www.home-assistant.io/components/meross_cloud",
   "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/blafoo/meross-homeassistant",
+  "quality_scale": "platinum",
+  "requirements": ["meross_iot==0.4.9.2"],
   "version": "2.0.0-beta.1"
 }
