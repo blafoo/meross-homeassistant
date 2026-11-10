@@ -4,6 +4,7 @@
   "documentation": "https://www.home-assistant.io/components/meross_cloud",
   "issue_tracker": "https://github.com/blafoo/meross-homeassistant",
   "dependencies": ["persistent_notification"],
+  "after_dependencies": ["zeroconf"],
   "codeowners": ["@blafoo"],
   "requirements": ["meross_iot==0.4.9.2"],
   "config_flow": true,
