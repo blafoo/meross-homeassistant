@@ -1,5 +1,5 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-[![Validate](https://img.shields.io/github/actions/workflow/status/blafoo/meross-homeassistant/validate.yml?branch=master&style=for-the-badge&label=Validate)](https://github.com/blafoo/meross-homeassistant/actions/workflows/validate.yml)
+[![Validate](https://img.shields.io/github/actions/workflow/status/blafoo/meross-homeassistant/validate.yml?branch=main&style=for-the-badge&label=Validate)](https://github.com/blafoo/meross-homeassistant/actions/workflows/validate.yml)
 
 # Meross HomeAssistant component
 
@@ -63,7 +63,7 @@ The following table summarizes the fields that the wizard will require you to fi
 | Skip MQTT certificate validation | True (Checked)          | Configures MQTT certificate validation. When unchecked it requires a valid certificate to be exposed from the Meross Server. If checked, it skips the MQTT certificate validation. If connecting to the official Meross cloud, you can uncheck this. When connecting to local-lan or custom MQTT brokers, you might want to check this. |
 
 The following animation shows an example of component configuration
-[![Installation via web UI](https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)](https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif)
+[![Installation via web UI](https://raw.githubusercontent.com/blafoo/meross-homeassistant/main/docs/source/images/components/meross_cloud/install-via-webui.gif)](https://raw.githubusercontent.com/blafoo/meross-homeassistant/main/docs/source/images/components/meross_cloud/install-via-webui.gif)
 
 ## Features
 ### Massive support

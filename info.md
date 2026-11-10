@@ -32,8 +32,8 @@ The following table will help you get the right one:
 
 The following animation shows how to do that.
 
-<a href="https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif">
-<img src="https://raw.githubusercontent.com/blafoo/meross-homeassistant/master/docs/source/images/components/meross_cloud/install-via-webui.gif" alt="Installation via web-ui" width=400>
+<a href="https://raw.githubusercontent.com/blafoo/meross-homeassistant/main/docs/source/images/components/meross_cloud/install-via-webui.gif">
+<img src="https://raw.githubusercontent.com/blafoo/meross-homeassistant/main/docs/source/images/components/meross_cloud/install-via-webui.gif" alt="Installation via web-ui" width=400>
 </a>
 
 ### API rate limit
