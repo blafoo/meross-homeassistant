@@ -1,5 +1,5 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-![Build](https://img.shields.io/azure-devops/build/blafoo/c4128d1b-c23c-418d-95c5-2de061954ee5/3/master?style=for-the-badge)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
+[![Validate](https://img.shields.io/github/actions/workflow/status/blafoo/meross-homeassistant/validate.yml?branch=master&style=for-the-badge&label=Validate)](https://github.com/blafoo/meross-homeassistant/actions/workflows/validate.yml)
 
 # Meross HomeAssistant component
 
@@ -16,9 +16,13 @@ If you have already HACS installed on your HomeAssistant, it's better to go with
 On the other hand, if you don't have HACS installed or if you don't plan to install it, then you can use manual installation.
 
 ### Option A: Installing via HACS
-If you have HACS, well, it's piece of cake! 
-Just search for "Meross" (Full name is Meross Integration) in the default repository of HACS and it'll show up.
-Click on Install. When the installation completes, **you must restart homeassistant** in order to make it work.
+This fork is not (yet) part of the HACS default store, so you need to add it as a **custom repository** first:
+1. Open HACS in Home Assistant → **Integrations**.
+2. Click the three-dot menu in the top-right corner → **Custom repositories**.
+3. Enter `https://github.com/blafoo/meross-homeassistant` as the repository URL, select category **Integration**, and click **Add**.
+4. Search for "Meross" (Full name is Meross Integration) and click **Install**.
+
+When the installation completes, **you must restart homeassistant** in order to make it work.
 As soon as HomeAssistant is restarted, you can proceed with __component setup__.
 
 ### Option B: Classic installation (custom_component)
