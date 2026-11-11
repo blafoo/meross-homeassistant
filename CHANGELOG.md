@@ -1,3 +1,9 @@
+# 2.0.0-beta.3 (2026-11-11)
+- Fix `supported_color_modes` on `LightEntityWrapper`/`DiffuserLightEntityWrapper` combining `ColorMode.BRIGHTNESS` with `ColorMode.RGB`/`ColorMode.COLOR_TEMP`, which HA rejects as invalid and refuses to add the entity (affected e.g. the `msl320cpr` LED strip).
+- Migrate `ValveEntityWrapper`/`ThermostatEntityWrapper` to the `native_temperature_unit`/`native_current_temperature`/`native_target_temperature` climate properties, fixing deprecation warnings (old properties are removed in HA 2027.11).
+- Upgrade CI workflows (`actions/checkout` v4 → v5, `actions/stale` v8 → v10) to use the current Node runtime.
+- Fix HACS/hassfest validation warnings: add `categories` to `manifest.json`, move `config.title` to the root of `strings.json`/translations.
+
 # 2.0.0-beta.2 (2026-11-11)
 - Fix invalid `ColorMode.WHITE` on diffuser lights, which HA 2026+ rejects outright, causing affected devices (e.g. MSS560x dimmers) to not be added at all; switched to `ColorMode.BRIGHTNESS` (originally proposed in albertogeniola/meross-homeassistant#591, thanks @Aldorus).
 - Catch `CommandTimeoutError` in `SwitchEntityWrapper.async_update` so a transient network timeout while polling power/consumption metrics no longer breaks entity setup/polling (originally proposed in albertogeniola/meross-homeassistant#598, thanks @CL0SeY).

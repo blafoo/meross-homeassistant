@@ -38,7 +38,9 @@ class DiffuserLightEntityWrapper(MerossDevice, LightEntity):
     _device: MerossOilDiffuserLightDevice
     # For now, we assume OilDiffuserLight supports all the following features.
     # From Meross API it is in fact impossible to determine which exact features are supported by the device.
-    _attr_supported_color_modes = {ColorMode.BRIGHTNESS, ColorMode.RGB, ColorMode.COLOR_TEMP}
+    # ColorMode.BRIGHTNESS must not be combined with other color modes (RGB/COLOR_TEMP
+    # already imply brightness control).
+    _attr_supported_color_modes = {ColorMode.RGB, ColorMode.COLOR_TEMP}
     _attr_min_color_temp_kelvin: int = 2700  # warmest white (≈370 mired)
     _attr_max_color_temp_kelvin: int = 6500  # coolest white (≈154 mired)
 
@@ -152,12 +154,14 @@ class LightEntityWrapper(MerossDevice, LightEntity):
     @property
     def supported_color_modes(self) -> set[ColorMode] | set[str] | None:
         res = set()
-        if self._device.get_supports_luminance(channel=self._channel_id):
-            res.add(ColorMode.BRIGHTNESS)
         if self._device.get_supports_rgb(channel=self._channel_id):
             res.add(ColorMode.RGB)
         if self._device.get_supports_temperature(channel=self._channel_id):
             res.add(ColorMode.COLOR_TEMP)
+        # ColorMode.BRIGHTNESS must not be combined with other color modes (RGB/COLOR_TEMP
+        # already imply brightness control); only use it as a standalone fallback.
+        if len(res) < 1 and self._device.get_supports_luminance(channel=self._channel_id):
+            res.add(ColorMode.BRIGHTNESS)
         if len(res) < 1:
             res.add(ColorMode.ONOFF)
         return res
@@ -181,12 +185,13 @@ class LightEntityWrapper(MerossDevice, LightEntity):
     def color_mode(self) -> ColorMode | str | None:
         """Return the color mode of the light."""
         # TODO: we need support from low-level library in order to keep track of mode that haas been set.
+        # Must return a value that is a member of supported_color_modes.
         if self._device.get_supports_rgb(channel=self._channel_id):
             return ColorMode.RGB
+        elif self._device.get_supports_temperature(channel=self._channel_id):
+            return ColorMode.COLOR_TEMP
         elif self._device.get_supports_luminance(channel=self._channel_id):
             return ColorMode.BRIGHTNESS
-        if self._device.get_supports_temperature(channel=self._channel_id):
-            return ColorMode.COLOR_TEMP
         return ColorMode.ONOFF
 
     @property
