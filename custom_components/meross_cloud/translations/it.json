@@ -1,4 +1,5 @@
 {
+  "title": "Meross",
   "config": {
     "abort": {
       "single_instance_allowed": "Il plugin Meross risulta già installato e non può essere installato nuovamente."
@@ -33,8 +34,7 @@
         "title": "Rinnovo dell'autenticazione richiesto",
         "description": "L'integrazione con Meross richiede la ri-autenticazione dell'account"
       }
-    },
-    "title": "Meross"
+    }
   },
   "options": {
     "error": {},
