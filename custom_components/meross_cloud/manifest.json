@@ -2,7 +2,7 @@
   "domain": "meross_cloud",
   "name": "Meross Cloud IoT",
   "after_dependencies": ["zeroconf"],
-  "categories": ["climate", "fan", "light", "switch"],
+  "categories": ["lighting", "plugs_switches", "climate"],
   "codeowners": ["@blafoo"],
   "config_flow": true,
   "dependencies": ["persistent_notification"],
