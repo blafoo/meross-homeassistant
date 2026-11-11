@@ -15,6 +15,8 @@ from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from homeassistant.util.ssl import get_default_context, get_default_no_verify_context
 from meross_iot.controller.device import BaseDevice
+from meross_iot.controller.subdevice import Mts100v3Valve
+from meross_iot.device_factory import _SUBDEVICE_MAPPING
 from meross_iot.http_api import MerossHttpClient, ErrorCodes
 from meross_iot.manager import MerossManager
 from meross_iot.model.credentials import MerossCloudCreds
@@ -54,6 +56,11 @@ from .common import (
 from .version import MEROSS_IOT_VERSION
 
 _LOGGER = logging.getLogger(__name__)
+
+# meross_iot only maps "mts100v3" to Mts100v3Valve; any other sub-device type falls back to a bare
+# GenericSubDevice (battery only). The MTS150 speaks the same Appliance.Hub.Mts100.* protocol with the
+# same payload, so register it with the MTS100 valve class until the library supports it natively.
+_SUBDEVICE_MAPPING.setdefault("mts150", Mts100v3Valve)
 
 CONFIG_SCHEMA = vol.Schema(
     {
