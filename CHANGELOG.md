@@ -1,3 +1,9 @@
+# 2.0.0-beta.2 (2026-11-11)
+- Fix invalid `ColorMode.WHITE` on diffuser lights, which HA 2026+ rejects outright, causing affected devices (e.g. MSS560x dimmers) to not be added at all; switched to `ColorMode.BRIGHTNESS` (originally proposed in albertogeniola/meross-homeassistant#591, thanks @Aldorus).
+- Catch `CommandTimeoutError` in `SwitchEntityWrapper.async_update` so a transient network timeout while polling power/consumption metrics no longer breaks entity setup/polling (originally proposed in albertogeniola/meross-homeassistant#598, thanks @CL0SeY).
+- Remove the deprecated `CONNECTION_CLASS`/`CONN_CLASS_CLOUD_PUSH` config flow attribute, which HA Core will remove in 2027.5.0 (originally proposed in albertogeniola/meross-homeassistant#606, thanks @cerealkiller57540).
+- Expose each device's MAC address via `device_info.connections`, enabling cross-referencing with other integrations such as device trackers (originally proposed in albertogeniola/meross-homeassistant#581, thanks @doggkruse).
+
 # 2.0.0-beta.1 (2026-11-10)
 - Initial release after forking the project to a new maintainer. The component is now maintained by @blafoo. Thanks to @albertogeniola for the previous work and support.
 - Fix color-temperature handling for Meross bulbs: migrate to `ATTR_COLOR_TEMP_KELVIN`, clamp out-of-range values and declare the supported Kelvin range, addressing "Out of range" errors (originally proposed in albertogeniola/meross-homeassistant#587, thanks @ZakiZtraki).

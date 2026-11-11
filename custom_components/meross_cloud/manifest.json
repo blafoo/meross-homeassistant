@@ -10,5 +10,5 @@
   "issue_tracker": "https://github.com/blafoo/meross-homeassistant",
   "quality_scale": "platinum",
   "requirements": ["meross_iot==0.4.9.2"],
-  "version": "2.0.0-beta.1"
+  "version": "2.0.0-beta.2"
 }
