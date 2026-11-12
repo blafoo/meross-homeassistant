@@ -1,3 +1,4 @@
+# 2.0.0-beta.4 (2026-11-12)
 - Fix setup failing with `HttpSubdeviceInfo.__init__() missing 2 required positional arguments: 'true_id' and 'sub_device_vendor'` for accounts with a hub, caused by a breaking change in the Meross HTTP API: update `meross_iot` 0.4.9.2 → 0.4.10.4 and pass an HA-provided SSL context to the MQTT manager, since `mqtt_skip_cert_validation` was removed from the library (#1; ported from upstream, albertogeniola/meross-homeassistant#584 and #567).
 - Add support for MTS150 thermostat valves, which previously only exposed a battery sensor: `meross_iot` has no class for the `mts150` sub-device type, so it is now registered with the `Mts100v3Valve` class (same `Appliance.Hub.Mts100.*` protocol), giving it climate controls and a temperature sensor (see albertogeniola/MerossIot#420, albertogeniola/meross-homeassistant#405).
 
