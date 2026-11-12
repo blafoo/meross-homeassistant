@@ -1,3 +1,5 @@
+- Fix setup failing with `HttpSubdeviceInfo.__init__() missing 2 required positional arguments: 'true_id' and 'sub_device_vendor'` for accounts with a hub, caused by a breaking change in the Meross HTTP API: update `meross_iot` 0.4.9.2 → 0.4.10.4 and pass an HA-provided SSL context to the MQTT manager, since `mqtt_skip_cert_validation` was removed from the library (#1; ported from upstream, albertogeniola/meross-homeassistant#584 and #567).
+
 # 2.0.0-beta.3 (2026-11-11)
 - Fix `supported_color_modes` on `LightEntityWrapper`/`DiffuserLightEntityWrapper` combining `ColorMode.BRIGHTNESS` with `ColorMode.RGB`/`ColorMode.COLOR_TEMP`, which HA rejects as invalid and refuses to add the entity (affected e.g. the `msl320cpr` LED strip).
 - Migrate `ValveEntityWrapper`/`ThermostatEntityWrapper` to the `native_temperature_unit`/`native_current_temperature`/`native_target_temperature` climate properties, fixing deprecation warnings (old properties are removed in HA 2027.11).
