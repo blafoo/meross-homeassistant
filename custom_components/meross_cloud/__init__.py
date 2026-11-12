@@ -57,11 +57,6 @@ from .version import MEROSS_IOT_VERSION
 
 _LOGGER = logging.getLogger(__name__)
 
-# meross_iot only maps "mts100v3" to Mts100v3Valve; any other sub-device type falls back to a bare
-# GenericSubDevice (battery only). The MTS150 speaks the same Appliance.Hub.Mts100.* protocol with the
-# same payload, so register it with the MTS100 valve class until the library supports it natively.
-_SUBDEVICE_MAPPING.setdefault("mts150", Mts100v3Valve)
-
 CONFIG_SCHEMA = vol.Schema(
     {
         DOMAIN: vol.Schema(
@@ -371,6 +366,11 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry):
     For us, the configuration entry is the username-password credentials that the user
     needs to access the Meross cloud.
     """
+
+    # meross_iot only maps "mts100v3" to Mts100v3Valve; any other sub-device type falls back to a bare
+    # GenericSubDevice (battery only). The MTS150 speaks the same Appliance.Hub.Mts100.* protocol with
+    # the same payload, so register it with the MTS100 valve class until the library supports it natively.
+    _SUBDEVICE_MAPPING.setdefault("mts150", Mts100v3Valve)
 
     # Retrieve the stored credentials from config-flow
     http_api_endpoint = config_entry.data.get(CONF_HTTP_ENDPOINT)
