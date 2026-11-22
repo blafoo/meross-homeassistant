@@ -5,6 +5,7 @@
 
 > **Note:** This is a fork of [albertogeniola/meross-homeassistant](https://github.com/albertogeniola/meross-homeassistant), maintained because the original project has seen no recent activity.
 > Many thanks to [@albertogeniola](https://github.com/albertogeniola) for the original work and for reverse-engineering the Meross protocols that this integration is built upon!
+> To switch from the original integration to this fork it is recommended to uninstall the original integration and install this fork. Then, re-add your Meross account in the configuration panel. This will ensure that all devices are re-discovered and that any issues with the original integration are avoided.
 
 A full-featured Homeassistant component to drive Meross devices. 
 This component is based on the underlying MerossIot library available [here](https://github.com/albertogeniola/MerossIot).
@@ -26,7 +27,7 @@ When the installation completes, **you must restart homeassistant** in order to 
 As soon as HomeAssistant is restarted, you can proceed with __component setup__.
 
 ### Option B: Classic installation (custom_component)
-1. Download the latest zip release archive from [here](https://github.com/blafoo/meross-homeassistant/releases/latest))
+1. Download the latest zip release archive from [here](https://github.com/blafoo/meross-homeassistant/releases/latest)
 1. Unzip/copy the meross_cloud directory within the `custom_components` directory of your homeassistant installation.
 The `custom_components` directory resides within your homeassistant configuration directory.
 Usually, the configuration directory is within your home (`~/.homeassistant/`).
