@@ -1,3 +1,6 @@
+# 2.0.0 (2026-11-22)
+- First stable release under the new maintainer (@blafoo). Combines all fixes from 2.0.0-beta.1 through beta.5 below; no further changes since beta.5.
+
 # 2.0.0-beta.5 (2026-11-18)
 - Add support for the MS405 water-leak sensor as a new `binary_sensor` platform (ported from upstream, albertogeniola/meross-homeassistant#479, #567).
 - Fix `OptionsFlow.config_entry` explicit-setter deprecation warning: `MerossOptionsFlowHandler` no longer stores `config_entry` itself, since HA now injects it (ported from upstream, albertogeniola/meross-homeassistant#576).
