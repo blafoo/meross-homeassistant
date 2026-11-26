@@ -6,10 +6,10 @@
   "codeowners": ["@blafoo"],
   "config_flow": true,
   "dependencies": ["persistent_notification"],
-  "documentation": "https://www.home-assistant.io/components/meross_cloud",
+  "documentation": "https://github.com/blafoo/meross-homeassistant",
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/blafoo/meross-homeassistant",
   "quality_scale": "platinum",
   "requirements": ["meross_iot==0.4.10.4"],
-  "version": "2.0.0"
+  "version": "2.0.0-hacs    "
 }
