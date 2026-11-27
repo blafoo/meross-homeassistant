@@ -1,4 +1,5 @@
 
+# 2.1.0 (2026-11-27)
 - Changed the name of the integration to "Meross Cloud" to reflect that it is a cloud-based integration, not a local one.
 
 # 2.0.0 (2026-11-22)

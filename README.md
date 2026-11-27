@@ -1,7 +1,7 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![Validate](https://img.shields.io/github/actions/workflow/status/blafoo/meross-homeassistant/validate.yml?branch=main&style=for-the-badge&label=Validate)](https://github.com/blafoo/meross-homeassistant/actions/workflows/validate.yml)
 
-# Meross HomeAssistant component
+# Meross cloud integration for Home Assistant
 
 > **Note:** This is a fork of [albertogeniola/meross-homeassistant](https://github.com/albertogeniola/meross-homeassistant), maintained because the original project has seen no recent activity.
 > Many thanks to [@albertogeniola](https://github.com/albertogeniola) for the original work and for reverse-engineering the Meross protocols that this integration is built upon!
