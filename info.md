@@ -20,7 +20,7 @@ you should reuse the one from your meross app.
 ## Installation & Configuration
 First, you need to install this integration via HACS. To do so, simply click on INSTALL on this dialog.
 Once installed, you should set up the Meross Cloud component to connect to the Meross Cloud service.
-Just navigate to \_settings -> Integrations, click "add" and then select "Meross Cloud IoT".
+Just navigate to \_settings -> Integrations, click "add" and then select "Meross Cloud".
 A pop-up will appear, asking for the Meross API endpoint to use and your Meross credentials.
 
 There are multiple official server endpoints, and you should select the one that is closest to your geo-region.

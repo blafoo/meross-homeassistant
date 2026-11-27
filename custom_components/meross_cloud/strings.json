@@ -19,20 +19,20 @@
       },
       "reauth_confirm": {
         "title": "Reauthentication required",
-        "description": "The Meross integration needs to re-authenticate your account"
+        "description": "The Meross Cloud integration needs to re-authenticate your account"
       }
     },
     "error": {
       "invalid_credentials": "Invalid credentials.",
-      "connection_error": "Unable to connect to Meross.",
-      "invalid_http_endpoint": "Invalid Meross HTTTP api endpoint",
+      "connection_error": "Unable to connect to Meross cloud.",
+      "invalid_http_endpoint": "Invalid Meross HTTP API endpoint",
       "api_invalid_ssl_code": "Invalid SSL response received by the server. Are you sure the server is exposed in HTTPS? Try plain http and see if this happens again.",
       "api_connection_refused": "Cannot connect to HTTP(S) API server. Make sure the address is valid",
       "mdns_lookup_failed": "The discovery was unable to find MQTT/API service. Default values have been selected.",
       "missing_mfa": "Your account requires MFA code to proceed. Please provide it."
     },
     "abort": {
-      "single_instance_allowed": "Only a single configuration of Meross is allowed."
+      "single_instance_allowed": "Only a single configuration of Meross Cloud is allowed."
     }
   },
   "options": {

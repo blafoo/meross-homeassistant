@@ -1,5 +1,5 @@
 {
-  "name": "Meross Integration",
+  "name": "Meross Cloud",
   "hacs": "1.6.0",
-  "homeassistant": "2026.10"
+  "homeassistant": "2026.11"
 }

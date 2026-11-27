@@ -1,8 +1,5 @@
-# 2.0.1 (2026-11-26)
-- Fix `async_turn_on` on `ValveEntityWrapper`/`ThermostatEntityWrapper` raising `AttributeError`: `HVACMode.HEATING` does not exist in Home Assistant (that name is only valid on `HVACAction`); switched to `HVACMode.HEAT`.
-- Restore the original upstream copyright notice in `LICENSE` alongside the new maintainer's, as required by the MIT license.
-- Fix the `documentation` link in `manifest.json`, which pointed to a non-existent Home Assistant docs page; now points to this repository.
-- Add `brand/` assets (icon, logo, and @2x variants) so the integration is no longer shown without an icon in Home Assistant.
+
+- Changed the name of the integration to "Meross Cloud" to reflect that it is a cloud-based integration, not a local one.
 
 # 2.0.0 (2026-11-22)
 - First stable release under the new maintainer (@blafoo). Combines all fixes from 2.0.0-beta.1 through beta.5 below; no further changes since beta.5.

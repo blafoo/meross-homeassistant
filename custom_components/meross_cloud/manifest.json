@@ -1,6 +1,6 @@
 {
   "domain": "meross_cloud",
-  "name": "Meross Cloud IoT",
+  "name": "Meross Cloud",
   "after_dependencies": ["zeroconf"],
   "categories": ["lighting", "plugs_switches", "climate"],
   "codeowners": ["@blafoo"],

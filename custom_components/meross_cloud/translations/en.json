@@ -32,7 +32,7 @@
       },
       "reauth_confirm": {
         "title": "Reauthentication required",
-        "description": "The Meross integration needs to re-authenticate your account"
+        "description": "The Meross Cloud integration needs to re-authenticate your account"
       }
     }
   },

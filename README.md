@@ -10,51 +10,21 @@
 A full-featured Homeassistant component to drive Meross devices. 
 This component is based on the underlying MerossIot library available [here](https://github.com/albertogeniola/MerossIot).
 
-## Installation & configuration
-You can install this component in two ways: via HACS or manually.
-HACS is a nice community-maintained components manager, which allows you to install git-hub hosted components in a few clicks.
-If you have already HACS installed on your HomeAssistant, it's better to go with that.
-On the other hand, if you don't have HACS installed or if you don't plan to install it, then you can use manual installation.
+## Installation instructions (2 steps)
+### Step 1. Marketplace (formerly known as HACS): add the Integration
 
-### Option A: Installing via HACS
-This fork is not (yet) part of the HACS default store, so you need to add it as a **custom repository** first:
-1. Open HACS in Home Assistant → **Integrations**.
-2. Click the three-dot menu in the top-right corner → **Custom repositories**.
-3. Enter `https://github.com/blafoo/meross-homeassistant` as the repository URL, select category **Integration**, and click **Add**.
-4. Search for "Meross" (Full name is Meross Integration) and click **Install**.
+[![Open your Home Assistant instance and add the repository to HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=blafoo&repository=meross-homeassistant&category=integration)
+1. Search for `Meross Cloud` in the search bar
+2. Install the 'Meross Cloud' (Version 2.0.x or higher) integration
+3. Restart HA
 
-When the installation completes, **you must restart homeassistant** in order to make it work.
-As soon as HomeAssistant is restarted, you can proceed with __component setup__.
+### Step 2. Setup the Integration
 
-### Option B: Classic installation (custom_component)
-1. Download the latest zip release archive from [here](https://github.com/blafoo/meross-homeassistant/releases/latest)
-1. Unzip/copy the meross_cloud directory within the `custom_components` directory of your homeassistant installation.
-The `custom_components` directory resides within your homeassistant configuration directory.
-Usually, the configuration directory is within your home (`~/.homeassistant/`).
-In other words, the configuration directory of homeassistant is where the config.yaml file is located.
-After a correct installation, your configuration directory should look like the following.
-    ```
-    └── ...
-    └── configuration.yaml
-    └── secrects.yaml
-    └── custom_components
-        └── meross_cloud
-            └── __init__.py
-            └── common.py
-            └── cover.py
-            └── ...
-    ```
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=meross_cloud)
 
-    **Note**: if the custom_components directory does not exist, you need to create it.
-
-After copy-pasting the meross_cloud directory into the custom_components folder, you need to restart HomeAssistant.
-As soon as HomeAssistant is restarted, you can proceed with __component setup__.
-
-### Component setup    
-Once the component has been installed, you need to configure it in order to make it work.
-To do so, navigate to "Configuration -> Integrations -> Add Integration" and look for "Meross Cloud IoT".
-As soon as you add it, you'll be asked to configure it. 
-The following table summarizes the fields that the wizard will require you to fill in:
+4. After the restart go to  `Settings` -> `Devices & Services` area
+5. Add the new integration `Meross Cloud` and follow the instructions<br/>
+6. The following table summarizes the fields that the wizard will require you to fill in:
 
 |  Field Name                      | Example Value           | Description                                             | 
 |----------------------------------|-------------------------|---------------------------------------------------------|
